@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{Component} from 'react'
 // import logo from './logo.svg';
 import './App.css';
+import { CardList } from './Components/Card-list/Card-list';
 
 class App extends React.Component {
   constructor(){
@@ -18,6 +19,7 @@ class App extends React.Component {
   render (){
     return (
       <div className="App">
+      <CardList><h1>Teekay</h1></CardList>
       {this.state.monsters.map(monster => (
         <h1 key={monster.id}>{monster.name}</h1>
       ))}
